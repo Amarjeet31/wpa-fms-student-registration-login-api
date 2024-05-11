@@ -19,13 +19,15 @@
 		}
         </style>
     </head>
-    <a href="/api/generate/report" color="blue"><ceter>Score-Report</ceter></a><br>
     <body>
         <div align="center"><br>
             <div class="content">
 		     <h2>Your Test Score: <span th:text="${score}">%</span><h2>
 		     <h3>Congratulation !</h3>
-		     <h4>You have successfully completed...</h4>
+		      <div class="container" align="left">
+		     <h2>Welcome, [[${student.getName()}]]</h2>
+	          </div>
+		     <h4>You have successfully passed...</h4>
             </div>
         </div>
     </body>
