@@ -18,22 +18,50 @@ public class ETestService {
 		List<Etest> list= (List<Etest>) testRepository.findAll();
 		return list;
 	}
-	
+
+
 	public int getScore(Test test) {
 		int score=0;
-		if(test.getTest1().equals("true")) {
-			score=score+20;
-		}if(test.getTest2().equals("true")) {
+
+		if(test.getTest1()!=null) {
+			if(test.getTest1().equals("true")) {
+				score=score+20;
+			}
+		}else {
+			test.setTest1("false");
+			score=score+0;
+		}
+		if(test.getTest2()!=null) {	
+		  if(test.getTest2().equals("true")) {
 			score=score+20;
 		}
-		if(test.getTest3().equals("true")) {
+		}else {
+			test.setTest2("false");
+			score=score+0;
+		}
+		if(test.getTest3()!=null) {	
+		 if(test.getTest3().equals("true")) {
 			score=score+20;
 		}
-		if(test.getTest4().equals("true")) {
+		}else {
+			test.setTest3("false");
+			score=score+0;
+		}
+		if(test.getTest4()!=null) {
+		  if(test.getTest4().equals("true")) {
 			score=score+20;
 		}
-		if(test.getTest5().equals("true")) {
+		}else {
+			test.setTest4("false");
+			score=score+0;
+		}
+		if(test.getTest5()!=null) {
+		 if(test.getTest5().equals("true")) {
 			score=score+20;
+		}
+		}else {
+			test.setTest5("false");
+			score=score+0;
 		}
 		return score;
 	}
