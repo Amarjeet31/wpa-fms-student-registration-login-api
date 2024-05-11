@@ -34,7 +34,12 @@ public class ETestController {
 	@PostMapping("/score")
 	public String getScore(@ModelAttribute Test test,Model model) {
 		int score=testService.getScore(test);
+		if(score>=70) {
 		model.addAttribute("score", score);
 		return "test_score";
+		}else {
+			model.addAttribute("score", score);
+			return "test_score_fail";
+		}
 	}
 }
