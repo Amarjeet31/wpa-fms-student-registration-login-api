@@ -34,7 +34,7 @@ public class ReportScoreController {
 		student=service.getAllStudent();
 		String finalHtml=null;
 		Context dataContext=dataMapper.setData(student);
-		finalHtml=springTemplateEngine.process("studentRecords", dataContext);
+		finalHtml=springTemplateEngine.process("test_score", dataContext);
 		reportGenerator.htmlToPdf(finalHtml);
 		
 		return "Success";
