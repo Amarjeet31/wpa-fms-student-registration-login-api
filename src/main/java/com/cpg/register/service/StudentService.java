@@ -21,9 +21,9 @@ public class StudentService {
 	}
 
 	public void addStudent(Student student) {
-		repository.addStudent(student.getId(), student.getAge(), student.getCity(), student.getEmail(), 
-				student.getGender(), student.getMobile(),  student.getName(), student.getPassword(), student.getRole());
 		
+	repository.addStudent(student.getId(), student.getAge(), student.getCity(), student.getEmail(), 
+				student.getGender(), student.getMobile(),  student.getName(), student.getPassword(), student.getRole());
 	}
 
 	public boolean validateStudent(Student student1) {

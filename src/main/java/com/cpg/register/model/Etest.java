@@ -19,7 +19,7 @@ public class Etest {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="test_Id")
-	private Long tID;
+	private long tID;
 	@Column(name="test_Name")
 	private String tName;
 	@Column(name="test_Value")
@@ -28,8 +28,8 @@ public class Etest {
 	public Long gettID() {
 		return tID;
 	}
-	public void settID(Long tID) {
-		this.tID = tID;
+	public void settID(int i) {
+		this.tID = i;
 	}
 	public String gettName() {
 		return tName;

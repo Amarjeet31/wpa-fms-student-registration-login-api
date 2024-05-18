@@ -11,7 +11,7 @@ public class AdminService {
 	@Autowired
 	private AdminRepository repository;
 	
-	public void removeStudent(Long id) {
+	public void removeStudent(long id) {
 		repository.deleteById(id);
 	}
 
