@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.cpg.register.model.Etest;
+import com.cpg.register.model.Student;
 import com.cpg.register.model.Test;
 import com.cpg.register.service.ETestService;
 
@@ -41,5 +42,11 @@ public class ETestController {
 			model.addAttribute("score", score);
 			return "test_score_fail";
 		}
+	}
+	@GetMapping("question/all")
+	public String getAllQuestion(Model model) {
+		List<Etest> tests=testService.getData();
+		model.addAttribute("tests", tests);
+		return "test_record";
 	}
 }

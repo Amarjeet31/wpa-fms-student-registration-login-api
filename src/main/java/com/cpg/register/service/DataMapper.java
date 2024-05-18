@@ -19,8 +19,8 @@ public class DataMapper {
 		Map<String,Object> object=new HashMap<>();
 		object.put("students", studentList);
 		context.setVariables(object);
-		
+
 		return context;
 	}
-
+	
 }

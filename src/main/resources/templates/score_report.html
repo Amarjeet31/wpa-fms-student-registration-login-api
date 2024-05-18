@@ -11,7 +11,7 @@
 			color: green;
 			background-color: cornsilk;
 		}
-		h3{
+		h1{
 			color: green;
 		}
 		h4{
@@ -20,16 +20,19 @@
         </style>
     </head>
     <body>
+		<form action="generate/report" modelAttribute="generate" method="post">
         <div align="center"><br>
             <div class="content">
-		     <h2>Your Test Score: <span th:text="${score}">%</span><h2>
-		     <h3>Congratulation !</h3>
-		      <div class="container" align="left">
-		     <h2>Welcome, [[${student.getName()}]]</h2>
+			 <h1><center>Certificate</center></h1><br><br>
+			  <h2>Hello, [[${student.getName()}]] Congratulation !</h2><br>
+			  <p>You have successfully completed certification and</p>
+		     <h2>Your Score is: <span th:text="${score}">%</span><h2>
+		      <p>All the best !</p><br>
 	          </div>
-		     <h4>You have successfully passed...</h4>
+		     <h4>Thank you and best regards...</h4>
             </div>
         </div>
+        </form>
     </body>
      <a href="/api/test" color="blue"><center>go back</center></a><br>
 </html>
