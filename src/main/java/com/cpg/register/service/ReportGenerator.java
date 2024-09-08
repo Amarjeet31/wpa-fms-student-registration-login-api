@@ -1,5 +1,6 @@
 package com.cpg.register.service;
 
+import java.io.File;
 import java.io.FileOutputStream;
 
 import javax.sql.DataSource;
@@ -13,6 +14,7 @@ import com.itextpdf.html2pdf.HtmlConverter;
 import com.itextpdf.html2pdf.resolver.font.DefaultFontProvider;
 import com.itextpdf.io.IOException;
 import com.itextpdf.io.source.ByteArrayOutputStream;
+import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.lowagie.text.DocumentException;
 
@@ -36,7 +38,7 @@ public class ReportGenerator {
 			
 			HtmlConverter.convertToPdf(processedHtml, pdfWriter,converterProperties);
 			
-			FileOutputStream fileOutputStream=new FileOutputStream("C:/Users/softa/Downloads");
+			FileOutputStream fileOutputStream=new FileOutputStream("C:/Users/softa/Downloads/document/score.pdf");
 			
 			byteArraryArrayOutputStream.writeTo(fileOutputStream);
 			byteArraryArrayOutputStream.close();
@@ -51,6 +53,8 @@ public class ReportGenerator {
 		}
 		return null;
 	}
+	
+	
 	/*
 	 * @Autowired DataSource dataSource;
 	 * 

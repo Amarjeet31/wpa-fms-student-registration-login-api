@@ -40,6 +40,8 @@ public class Student {
 	private String city;
 	@Column(name="user_role")
 	private String role;
+	
+	private int score;
 
 	public long getId() {
 		return id;
@@ -89,12 +91,17 @@ public class Student {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
 	public String getRole() {
 		return role;
 	}
 	public void setRole(String role) {
 		this.role = role;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score=score;
 	}
 	@Override
 	public String toString() {

@@ -19,7 +19,8 @@ import com.cpg.register.service.ETestService;
 public class ETestController {
 	@Autowired
 	private ETestService testService;
-	
+
+    private Student stud;	
 	@GetMapping("/test")
 	public String getData(Model model) {
 		List<Etest> tests=testService.getData();

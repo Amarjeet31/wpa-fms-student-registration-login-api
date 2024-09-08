@@ -13,3 +13,11 @@ spring:
         useSSL: false
   application:
     name: EmployeeService   
+    
+wpb:
+  hsbc:
+    input:
+      notification-type: CCM, mobile
+      field1: treatment,operational
+      field2: gps,obs 
+      

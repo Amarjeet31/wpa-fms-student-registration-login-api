@@ -14,10 +14,10 @@ import com.cpg.register.model.Student;
 @Service
 public class DataMapper {
 	
-	public Context setData(List<Student> studentList) {
+	public Context setData(Student student) {
 		Context context=new Context();
 		Map<String,Object> object=new HashMap<>();
-		object.put("students", studentList);
+		object.put("student", student);
 		context.setVariables(object);
 
 		return context;
